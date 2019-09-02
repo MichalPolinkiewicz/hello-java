@@ -3,7 +3,7 @@ node {
 
     stage('Build') {
         try {
-            bat "mvn clean install"
+            cmd.exe "mvn clean install"
         } catch (ex) {
             notifyFail("${projectName} build failed")
            
