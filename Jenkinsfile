@@ -1,9 +1,15 @@
 node {
     def projectName = "Java-Test-App"
 
-    stage('Build') {
+    stage('Checkout') {
         try {
             checkout scm
+        } catch (ex) {
+            notifyFail("${projectName} git checkout failed")
+        }
+    }
+    stage('Build') {
+        try {
             bat "mvn clean install"
         } catch (ex) {
             notifyFail("${projectName} build failed")
