@@ -7,7 +7,7 @@ node {
         } catch (ex) {
             echo "application build failed"
             currentBuild.result = 'FAILED'
-            return;
+            skipRemainingStages = true
         }
     }
     stage('Stage 2') {
