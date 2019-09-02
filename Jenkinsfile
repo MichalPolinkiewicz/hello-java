@@ -6,6 +6,7 @@ node {
             bat "mvn clean install"
         } catch (ex) {
             echo "application build failed"
+            currentBuild.result = 'FAILED'
         }
     }
 }
