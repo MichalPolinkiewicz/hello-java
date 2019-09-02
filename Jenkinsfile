@@ -6,7 +6,8 @@ node {
             bat "mvn clean install"
         } catch (ex) {
             echo "application build failed"
-            currentBuild.result = 'ABORTED'
+            currentBuild.result = 'FAILED'
+            return;
         }
     }
     stage('Stage 2') {
