@@ -3,6 +3,7 @@ node {
 
     stage('Build') {
         try {
+            checkout scm
             bat "mvn clean install"
         } catch (ex) {
             notifyFail("${projectName} build failed")
