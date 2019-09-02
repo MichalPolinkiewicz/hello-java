@@ -12,8 +12,7 @@ node {
         try {
             bat "mvn clean install"
         } catch (ex) {
-            notifyFail("${projectName} build failed")
-           
+            notifyFail("${projectName} build failed") 
         }
     }
     stage('Stage 2') {
