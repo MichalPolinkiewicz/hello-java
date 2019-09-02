@@ -9,4 +9,7 @@ node {
             currentBuild.result = 'FAILED'
         }
     }
+    stage('Stage 2') {
+        echo "stage 2 executed"
+    }
 }
