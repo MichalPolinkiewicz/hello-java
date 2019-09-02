@@ -21,6 +21,9 @@ node {
     stage('Stage 3') {
         echo "stage 3 executed"
     }
+    stage('Stage 4') {
+        echo "stage 4 executed"
+    }
 }
 
 def notifyFail(msg = null) {
